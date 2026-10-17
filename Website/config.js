@@ -18,7 +18,7 @@
     // then open Website/setup.html instead of pretending OAuth is ready.
     // This must be the backend URL, not the GitHub Pages URL. After deployment,
     // enter the same HTTPS URL here and publish the Website again.
-    apiBase: '',
+    apiBase: 'https://auralis-api.wisp.uno',
 
     // Discord Developer Portal → General Information → Application ID.
     clientId: '1554961008064331826',
