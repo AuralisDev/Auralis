@@ -13,11 +13,9 @@
     siteUrl: 'https://auralisdev.github.io/Auralis/',
 
     // Public HTTPS base URL of your running Node.js backend.
-    // Example after deploying: 'https://YOUR-SERVICE.onrender.com'
-    // Leave empty until you have deployed the backend; public login/dashboard links
-    // then open Website/setup.html instead of pretending OAuth is ready.
-    // This must be the backend URL, not the GitHub Pages URL. After deployment,
-    // enter the same HTTPS URL here and publish the Website again.
+    // Public HTTPS backend currently configured for Auralis on WispByte.
+    // This URL must serve /health and /public/api/servers; WispByte must forward
+    // to the app's assigned port (currently shown as 12700 in the subdomain page).
     apiBase: 'https://auralis-api.wisp.uno',
 
     // Discord Developer Portal → General Information → Application ID.
