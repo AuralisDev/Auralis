@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Auralis — Modules</title><link rel="icon" href="../assets/auralis-logo.png"><link rel="stylesheet" href="styles.css"></head>
+<body data-page="modules">
+<div class="login-wrap hidden" data-login-screen><div class="login-card"><img src="../assets/auralis-logo.png" alt="Auralis"><div class="eyebrow" style="margin-top:18px">AURALIS</div><h1>Sign in with Discord</h1><p>Choose a server you own or can manage, then turn on the features your community needs.</p><a class="button primary" data-login href="#">Login with Discord</a></div></div>
+<div class="app hidden" data-app><aside class="sidebar" data-sidebar><a class="brand" href="https://auralisdev.github.io/Auralis/"><img src="../assets/auralis-logo.png" alt="Auralis"><div>Auralis<small>Discord Bot</small></div></a><div data-sidebar-nav></div><div class="sidebar-bottom"><div class="sidebar-account" data-sidebar-account></div><a class="button" href="https://auralisdev.github.io/Auralis/">↗ &nbsp;Home</a><button class="button danger" data-logout type="button">↪ &nbsp;Log out</button></div></aside>
+<main class="main"><header class="topbar"><div class="top-title"><div><div class="top-sub">SERVER SETTINGS</div><strong data-guild-name>Loading server…</strong></div></div><div class="topbar-tools"><div class="topbar-user" data-topbar-user></div><button class="button danger topbar-logout" data-logout type="button">Log out</button></div><select class="guild-select" data-guild-select aria-label="Select Discord server"></select></header>
+<div class="content" data-page-root><div class="page-head"><div><div class="eyebrow">Modules</div><h1>Modules</h1><p>Choose the tools your server needs. Settings are kept separate for each server, so enabling a feature here will not change another community.</p></div><span class="status-chip">Per-server settings</span></div>
+<div class="module-toolbar"><label class="module-search"><span aria-hidden="true">⌕</span><input type="search" data-module-search placeholder="Search modules…" aria-label="Search modules"></label><select class="inline-select" data-module-category-filter aria-label="Filter modules"><option value="all">All categories</option><option value="community">Community</option><option value="safety">Safety</option><option value="automation">Automation</option><option value="tools">Tools</option></select><span class="module-count" data-module-count>38 modules</span></div>
+<div class="module-grid" data-module-grid>
+<article class="module-card" data-module-card data-module-name="tickets" data-module-category="community">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🎟️</div><div class="module-title"><h3>Tickets</h3><span class="module-owner">Auralis</span></div><span class="module-category">Community</span></div>
+  <p class="module-description">Private support channels, claims, transcripts and multiple named ticket panels.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="tickets" aria-label="Toggle Tickets" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="tickets.html?guild=" data-module-config data-module-key="tickets">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="applications" data-module-category="community">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">📝</div><div class="module-title"><h3>Applications</h3><span class="module-owner">Auralis</span></div><span class="module-category">Community</span></div>
+  <p class="module-description">Create staff, creator and partner forms, then review submissions from one place.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="applications" aria-label="Toggle Applications" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="applications.html?guild=" data-module-config data-module-key="applications">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="moderation" data-module-category="safety">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🛡️</div><div class="module-title"><h3>Moderation</h3><span class="module-owner">Auralis</span></div><span class="module-category">Safety</span></div>
+  <p class="module-description">Warnings, cases, bans, kicks, timeouts, notes and member history.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="moderation" aria-label="Toggle Moderation" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="moderation.html?guild=" data-module-config data-module-key="moderation">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="auto moderation" data-module-category="safety">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🧹</div><div class="module-title"><h3>Auto Moderation</h3><span class="module-owner">Auralis</span></div><span class="module-category">Safety</span></div>
+  <p class="module-description">Filter bad words, invites, links, emoji spam, duplicate text, oversized posts and more.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="automod" aria-label="Toggle Auto Moderation" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="automod.html?guild=" data-module-config data-module-key="automod">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="anti-raid" data-module-category="safety">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🚨</div><div class="module-title"><h3>Anti-Raid</h3><span class="module-owner">Auralis</span></div><span class="module-category">Safety</span></div>
+  <p class="module-description">Respond to join spikes and suspicious account activity with server-specific rules.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="antiraid" aria-label="Toggle Anti-Raid" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="security.html?guild=" data-module-config data-module-key="antiraid">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="anti-nuke" data-module-category="safety">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🔐</div><div class="module-title"><h3>Anti-Nuke</h3><span class="module-owner">Auralis</span></div><span class="module-category">Safety</span></div>
+  <p class="module-description">Protect roles, channels, webhooks and other server assets from dangerous actions.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="antinuke" aria-label="Toggle Anti-Nuke" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="security.html?guild=" data-module-config data-module-key="antinuke">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="verification" data-module-category="safety">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">✅</div><div class="module-title"><h3>Verification</h3><span class="module-owner">Auralis</span></div><span class="module-category">Safety</span></div>
+  <p class="module-description">Configure verification roles, channels and member prompts.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="verify" aria-label="Toggle Verification" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="security.html?guild=" data-module-config data-module-key="verify">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="jail" data-module-category="safety">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🔒</div><div class="module-title"><h3>Jail</h3><span class="module-owner">Auralis</span></div><span class="module-category">Safety</span></div>
+  <p class="module-description">Set up staff-only jail and restoration workflows.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="jail" aria-label="Toggle Jail" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="moderation.html?guild=" data-module-config data-module-key="jail">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="welcome & goodbye" data-module-category="community">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">👋</div><div class="module-title"><h3>Welcome & Goodbye</h3><span class="module-owner">Auralis</span></div><span class="module-category">Community</span></div>
+  <p class="module-description">Customize join and leave messages, greeting embeds and automatic roles.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="welcome" aria-label="Toggle Welcome & Goodbye" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="welcome.html?guild=" data-module-config data-module-key="welcome">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="levels & xp" data-module-category="community">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">📈</div><div class="module-title"><h3>Levels & XP</h3><span class="module-owner">Auralis</span></div><span class="module-category">Community</span></div>
+  <p class="module-description">Tune XP, cooldowns, level announcements, rewards and leaderboards.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="levels" aria-label="Toggle Levels & XP" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="levels.html?guild=" data-module-config data-module-key="levels">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="giveaways" data-module-category="community">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🎁</div><div class="module-title"><h3>Giveaways</h3><span class="module-owner">Auralis</span></div><span class="module-category">Community</span></div>
+  <p class="module-description">Create giveaways with winners, durations and participation requirements.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="giveaways" aria-label="Toggle Giveaways" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="giveaways.html?guild=" data-module-config data-module-key="giveaways">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="polls" data-module-category="community">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">📊</div><div class="module-title"><h3>Polls</h3><span class="module-owner">Auralis</span></div><span class="module-category">Community</span></div>
+  <p class="module-description">Run polls with configurable choices, durations and result visibility.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="polls" aria-label="Toggle Polls" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="community.html?guild=" data-module-config data-module-key="polls">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="suggestions" data-module-category="community">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">💡</div><div class="module-title"><h3>Suggestions</h3><span class="module-owner">Auralis</span></div><span class="module-category">Community</span></div>
+  <p class="module-description">Collect ideas, set a review channel and manage suggestion outcomes.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="suggestions" aria-label="Toggle Suggestions" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="community.html?guild=" data-module-config data-module-key="suggestions">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="reaction roles" data-module-category="community">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🎭</div><div class="module-title"><h3>Reaction Roles</h3><span class="module-owner">Auralis</span></div><span class="module-category">Community</span></div>
+  <p class="module-description">Give members roles through supported reaction-role panels.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="reactionroles" aria-label="Toggle Reaction Roles" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="reactions.html?guild=" data-module-config data-module-key="reactionroles">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="button roles" data-module-category="community">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🔘</div><div class="module-title"><h3>Button Roles</h3><span class="module-owner">Auralis</span></div><span class="module-category">Community</span></div>
+  <p class="module-description">Let members choose roles with clear button-based panels.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="buttonroles" aria-label="Toggle Button Roles" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="reactions.html?guild=" data-module-config data-module-key="buttonroles">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="booster roles" data-module-category="community">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">💎</div><div class="module-title"><h3>Booster Roles</h3><span class="module-owner">Auralis</span></div><span class="module-category">Community</span></div>
+  <p class="module-description">Configure server-booster role handling and related messages.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="boosterroles" aria-label="Toggle Booster Roles" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="reactions.html?guild=" data-module-config data-module-key="boosterroles">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="auto roles" data-module-category="community">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🏷️</div><div class="module-title"><h3>Auto Roles</h3><span class="module-owner">Auralis</span></div><span class="module-category">Community</span></div>
+  <p class="module-description">Add or remove selected roles when members join or meet configured rules.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="autoroles" aria-label="Toggle Auto Roles" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="reactions.html?guild=" data-module-config data-module-key="autoroles">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="voice master" data-module-category="community">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🎙️</div><div class="module-title"><h3>Voice Master</h3><span class="module-owner">Auralis</span></div><span class="module-category">Community</span></div>
+  <p class="module-description">Create and manage temporary voice channels with ownership controls.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="voicemaster" aria-label="Toggle Voice Master" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="extras.html?guild=" data-module-config data-module-key="voicemaster">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="birthdays" data-module-category="community">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🎂</div><div class="module-title"><h3>Birthdays</h3><span class="module-owner">Auralis</span></div><span class="module-category">Community</span></div>
+  <p class="module-description">Configure birthday collection, announcements and privacy options.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="birthdays" aria-label="Toggle Birthdays" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="community.html?guild=" data-module-config data-module-key="birthdays">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="timezones" data-module-category="community">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🌍</div><div class="module-title"><h3>Timezones</h3><span class="module-owner">Auralis</span></div><span class="module-category">Community</span></div>
+  <p class="module-description">Help members manage time zones and schedule community activities.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="timezones" aria-label="Toggle Timezones" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="community.html?guild=" data-module-config data-module-key="timezones">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="counters" data-module-category="tools">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🔢</div><div class="module-title"><h3>Counters</h3><span class="module-owner">Auralis</span></div><span class="module-category">Tools</span></div>
+  <p class="module-description">Keep member, boost, role and other supported counters up to date.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="counters" aria-label="Toggle Counters" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="extras.html?guild=" data-module-config data-module-key="counters">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="image-only channels" data-module-category="safety">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🖼️</div><div class="module-title"><h3>Image-Only Channels</h3><span class="module-owner">Auralis</span></div><span class="module-category">Safety</span></div>
+  <p class="module-description">Restrict selected channels to supported image and media attachments.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="imageonly" aria-label="Toggle Image-Only Channels" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="extras.html?guild=" data-module-config data-module-key="imageonly">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="sticky messages" data-module-category="community">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">📌</div><div class="module-title"><h3>Sticky Messages</h3><span class="module-owner">Auralis</span></div><span class="module-category">Community</span></div>
+  <p class="module-description">Keep important rules, links or notices visible near the end of a channel.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="sticky" aria-label="Toggle Sticky Messages" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="extras.html?guild=" data-module-config data-module-key="sticky">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="tags & saved replies" data-module-category="tools">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🏷️</div><div class="module-title"><h3>Tags & Saved Replies</h3><span class="module-owner">Auralis</span></div><span class="module-category">Tools</span></div>
+  <p class="module-description">Store reusable answers and publish them with the configured prefix.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="tags" aria-label="Toggle Tags & Saved Replies" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="extras.html?guild=" data-module-config data-module-key="tags">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="custom commands" data-module-category="automation">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">⌨️</div><div class="module-title"><h3>Custom Commands</h3><span class="module-owner">Auralis</span></div><span class="module-category">Automation</span></div>
+  <p class="module-description">Build prefix-only replies with access rules, cooldowns and rich embeds.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="customcmd" aria-label="Toggle Custom Commands" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="custom-commands.html?guild=" data-module-config data-module-key="customcmd">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="prefix commands" data-module-category="automation">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">⚡</div><div class="module-title"><h3>Prefix Commands</h3><span class="module-owner">Auralis</span></div><span class="module-category">Automation</span></div>
+  <p class="module-description">Choose the server prefix and enable or disable individual prefix commands.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="prefix" aria-label="Toggle Prefix Commands" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="automations.html?guild=" data-module-config data-module-key="prefix">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="economy" data-module-category="community">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">💸</div><div class="module-title"><h3>Economy</h3><span class="module-owner">Auralis</span></div><span class="module-category">Community</span></div>
+  <p class="module-description">Configure currency, bank capacity, daily rewards, work, transfers and games.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="economy" aria-label="Toggle Economy" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="economy.html?guild=" data-module-config data-module-key="economy">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="embed builder" data-module-category="automation">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🧩</div><div class="module-title"><h3>Embed Builder</h3><span class="module-owner">Auralis</span></div><span class="module-category">Automation</span></div>
+  <p class="module-description">Build reusable embeds with colors, images, thumbnails, links and footers.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="embeds" aria-label="Toggle Embed Builder" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="embeds.html?guild=" data-module-config data-module-key="embeds">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="keyword responses" data-module-category="automation">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">✉️</div><div class="module-title"><h3>Keyword Responses</h3><span class="module-owner">Auralis</span></div><span class="module-category">Automation</span></div>
+  <p class="module-description">Create text or embed replies matched by words, channels, roles and cooldowns.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="responses" aria-label="Toggle Keyword Responses" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="automations.html?guild=" data-module-config data-module-key="responses">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="automations" data-module-category="automation">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🗓️</div><div class="module-title"><h3>Automations</h3><span class="module-owner">Auralis</span></div><span class="module-category">Automation</span></div>
+  <p class="module-description">Control automatic responses and supported message-driven helpers.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="automations" aria-label="Toggle Automations" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="automations.html?guild=" data-module-config data-module-key="automations">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="announcements" data-module-category="community">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">📣</div><div class="module-title"><h3>Announcements</h3><span class="module-owner">Auralis</span></div><span class="module-category">Community</span></div>
+  <p class="module-description">Let authorized staff send structured announcements to a chosen channel.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="announcements" aria-label="Toggle Announcements" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="messages.html?guild=" data-module-config data-module-key="announcements">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="logs & audit" data-module-category="tools">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">📋</div><div class="module-title"><h3>Logs & Audit</h3><span class="module-owner">Auralis</span></div><span class="module-category">Tools</span></div>
+  <p class="module-description">Route moderation, message, member, role, channel, ticket and AutoMod logs.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="logs" aria-label="Toggle Logs & Audit" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="logs.html?guild=" data-module-config data-module-key="logs">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="webhooks" data-module-category="tools">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🪝</div><div class="module-title"><h3>Webhooks</h3><span class="module-owner">Auralis</span></div><span class="module-category">Tools</span></div>
+  <p class="module-description">Manage supported webhook helpers and set safe message destinations.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="webhooks" aria-label="Toggle Webhooks" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="webhooks.html?guild=" data-module-config data-module-key="webhooks">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="message snapshots" data-module-category="tools">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🔎</div><div class="module-title"><h3>Message Snapshots</h3><span class="module-owner">Auralis</span></div><span class="module-category">Tools</span></div>
+  <p class="module-description">Configure recent deleted/edited message snapshots and retention behaviour.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="snipe" aria-label="Toggle Message Snapshots" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="automations.html?guild=" data-module-config data-module-key="snipe">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="utility" data-module-category="tools">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🧰</div><div class="module-title"><h3>Utility</h3><span class="module-owner">Auralis</span></div><span class="module-category">Tools</span></div>
+  <p class="module-description">Server, role, channel and member information tools.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="utility" aria-label="Toggle Utility" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="misc.html?guild=" data-module-config data-module-key="utility">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="fun & games" data-module-category="community">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🎲</div><div class="module-title"><h3>Fun & Games</h3><span class="module-owner">Auralis</span></div><span class="module-category">Community</span></div>
+  <p class="module-description">Choose which casual games and light-hearted commands members can use.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="fun" aria-label="Toggle Fun & Games" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="misc.html?guild=" data-module-config data-module-key="fun">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="honeypot" data-module-category="safety">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🧷</div><div class="module-title"><h3>Honeypot</h3><span class="module-owner">Auralis</span></div><span class="module-category">Safety</span></div>
+  <p class="module-description">Watch configured trap channels and choose how unwanted posts are handled.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="honeypot" aria-label="Toggle Honeypot" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="security.html?guild=" data-module-config data-module-key="honeypot">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="module-card" data-module-card data-module-name="staff activity" data-module-category="tools">
+  <div class="module-card-head"><div class="module-icon" aria-hidden="true">🕒</div><div class="module-title"><h3>Staff Activity</h3><span class="module-owner">Auralis</span></div><span class="module-category">Tools</span></div>
+  <p class="module-description">Track ticket work, staff actions and activity summaries for configured periods.</p>
+  <div class="module-card-footer"><div class="module-enabled"><span>Enabled?</span><button class="switch" type="button" data-module-toggle="staffactivity" aria-label="Toggle Staff Activity" aria-pressed="false"><i></i></button></div><a class="button small module-configure" href="staff-activity.html?guild=" data-module-config data-module-key="staffactivity">Open configuration <span aria-hidden="true">↗</span></a></div>
+</article>
+</div><div class="bottom-space"></div></div></main></div><script src="../config.js"></script><script src="dashboard.js"></script></body></html>
