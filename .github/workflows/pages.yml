@@ -1,0 +1,60 @@
+name: Build and deploy Auralis Website
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+  schedule:
+    - cron: '23 */6 * * *'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          package-manager-cache: false
+
+      - name: Verify repository layout
+        run: |
+          test -f Website/build.mjs || { echo "::error::Website/build.mjs is missing. Upload the Website folder at repository root."; exit 1; }
+          test -f Website/index.html || { echo "::error::Website/index.html is missing."; exit 1; }
+          test -f DiscordBot/auralis.cjs || { echo "::error::DiscordBot/auralis.cjs is missing."; exit 1; }
+
+      - name: Validate and build website
+        env:
+          AURALIS_API_BASE: https://auralis-api.wisp.uno
+        run: |
+          node Website/build.mjs --check
+          node Website/build.mjs
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: Website/dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
